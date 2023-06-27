@@ -15,10 +15,10 @@ if (isset($_POST['validate'])){
 
         //Modifier les informations de la question qui possède l'id rentré en paramètre dans l'URL
         $editQuestionOnWebsite = $bdd->prepare('UPDATE questions SET titre = ?, description = ?, contenu = ? WHERE id = ?');
-        $editQuestionOnWebsite->execute(array($new_question_title, $new_question_description, $new_question_content, $idOfQuestion));
+        $editQuestionOnWebsite->execute(array($new_question_title, $new_question_description, $new_question_content, $idQuestion));
 
         //Redirection vers la page d'affichage des question de l'utilisateur
-        header('Location: my-questions.php');
+        header('Location: mesQuestions');
     
     }else{
         $errorMsg = "Veuillez compléter tous les champs...";

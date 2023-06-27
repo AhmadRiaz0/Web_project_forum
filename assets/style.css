@@ -1,0 +1,25 @@
+/* reset css*/ 
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: O;
+}
+body{
+    background-color: gainsboro;
+}
+.jumbotron{
+    
+    background-color: rgb(106, 145, 212);
+    color: white;
+    padding: 50px
+    
+
+}
+
+.navbar{
+    background-color: purple;
+}
+
+.footer{
+    background-color: purple;
+}

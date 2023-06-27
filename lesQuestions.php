@@ -1,7 +1,7 @@
 <?php
-    require('actions/users/securityAction.php'); 
-    require('actions/questions/getInfosOfEditedQuestionAction.php');
-    require('actions/questions/editQuestionAction.php');
+    require('actions/users/securite.php'); 
+    require('actions/questions/infosQuestion.php');
+    require('actions/questions/insererQuestion.php');
     
 ?>
 <!DOCTYPE html>

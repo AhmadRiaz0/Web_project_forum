@@ -28,7 +28,7 @@ if (isset($_POST['validate'])){
             )
         );
 
-        //Afficher le message dans publish-question.php
+        //Afficher le message dans publieQuestion
         $successMsg = "Votre question a bien été publié sur le site";
 
     }else{

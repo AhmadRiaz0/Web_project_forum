@@ -1,4 +1,4 @@
-<?php require('actions/users/loginAction.php'); ?>
+<?php require('actions/users/connexionUser.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <?php include 'includes/head.php'; ?>
@@ -24,7 +24,7 @@
     
     <button type="submit" class="btn btn-primary" name="validate">Se connecter</button>
     <br><br>
-    <a href="signup.php"><p>Je n'ai pas de compte, je m'inscrit </p></a>
+    <a href="inscription"><p>Je n'ai pas de compte, je m'inscrit </p></a>
 </form>
 </body>
 </html>

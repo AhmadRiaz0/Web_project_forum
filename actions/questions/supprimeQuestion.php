@@ -3,7 +3,7 @@
 //Vérifier si l'utilisateur est authentifié au niveau du site
 session_start();
 if(!isset($_SESSION['auth'])){
-    header('Location: ../../login.php');
+    header('Location: ../../connexion');
 }
 
 require('../database.php');
@@ -29,7 +29,7 @@ if(isset($_GET['id']) AND !empty($_GET['id'])){
             $deleteThisQuestion->execute(array($idOfTheQuestion));
 
             //Rediriger l'utilisateur vers ses questions
-            header('Location: ../../my-questions.php');
+            header('Location: ../../mesQuestions');
             
 
         }else{

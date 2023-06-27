@@ -1,6 +1,6 @@
 <?php 
-    require('actions/users/securityAction.php');
-    require('actions/questions/publishQuestionAction.php');
+    require('actions/users/securite.php');
+    require('actions/questions/publieQuestionA.php');
     
 ?>
 <!DOCTYPE html>
@@ -15,7 +15,7 @@
             if(isset($errorMsg)){
                 echo '<p class="text-danger">'.$errorMsg.'</p>';
             }elseif(isset($successMsg)){
-                echo '<p>'.$successMsg.'</p>';
+                echo '<p class="text-primary">'.$successMsg.'</p>';
             }
         ?>
     <div class="mb-3">

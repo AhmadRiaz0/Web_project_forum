@@ -6,5 +6,5 @@ session_start();
 
 //Vérifier si l'utilisateur est authentifié/Vérifier si la variable n'est pas déclarée
 if(!isset($_SESSION['auth'])){
-    header('Location: login.php');
+    header('Location: connexion');
 }

@@ -1,14 +1,16 @@
 <?php 
     session_start();
-    require('actions/questions/showAllQuestionsAction.php')
+    require('actions/questions/RechercheQuestion.php')
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+    
 <?php include 'includes/head.php'; ?>
 <body>
     <?php include 'includes/navbar.php'; ?>
 <br><br>
+
 
     <!--Classe Bootstrap "container" qui permet de faire des marge dans la div-->
     <div class="container">
@@ -26,16 +28,20 @@
                 </div>
             </div>
         </form>
+        
+        <br><br>
 
-        <br>
+        <?php include 'includes/jumbotron.php'; ?>
+        <br><br>
+       
 
         <?php 
            while($question = $getAllQuestions->fetch()){
                ?>
-                <div class="card ">
+                <div class="card h-100">
                     <div class="car-header">
-                    <a href="article.php?id=<?php echo $question['id']; ?>"><?= $question['titre'];?></a>
-                    <a href="article.php?id=<?php echo $question['id']; ?>"><?= $question['titre'];?></a>
+                    <a href="question.php?id=<?php echo $question['id']; ?>"><?= $question['titre'];?></a>
+                    
                     </div>
                     <div class="card-body">
                     <?= $question['description']; ?>
@@ -51,6 +57,12 @@
 
            } 
         ?>
+        
     </div>
+
+    <br><br>
+
+    <?php include 'includes/_footer.php'; ?>
 </body>
+
 </html>

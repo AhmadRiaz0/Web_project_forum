@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    require('actions/users/showOneUsersProfileAction.php'); 
+    require('actions/users/detailsProfil.php'); 
 
 ?>
 <!DOCTYPE html>

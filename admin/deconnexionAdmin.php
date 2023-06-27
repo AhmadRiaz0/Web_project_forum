@@ -6,8 +6,5 @@ session_start();
 $_SESSION = [];
 session_destroy();
 
-//Rediriger vers la page login.php
-header('Location: ../../login.php');
-
-
-
+//Rediriger vers la page connexionAdmin.php
+header('Location: connexionAdmin.php');

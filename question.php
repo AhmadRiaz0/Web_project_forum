@@ -1,8 +1,8 @@
 <?php 
     session_start();
-    require('actions/questions/showArticleContentAction.php'); 
-    require('actions/questions/postAnswerAction.php');
-    require('actions/questions/showAllAnswersOfQuestionAction.php');
+    require('actions/questions/detailsQuestion.php'); 
+    require('actions/questions/repondre.php');
+    require('actions/questions/lesReponses.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +17,7 @@
         <?php
 
             if(isset($errorMsg)){
-                echo $errorMsg;
+                echo '<p class="text-danger">'.$errorMsg.'</p>';
             }
 
             if (isset($question_publication_date)){
@@ -45,6 +45,7 @@
                     </form>
                 
                     <?php
+                    
                         while($answer = $getAllAnswersOfThisQuestion->fetch()){
                             ?>
                             <div class="card">

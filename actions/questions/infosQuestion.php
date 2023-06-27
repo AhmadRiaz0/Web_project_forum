@@ -6,11 +6,11 @@ require('actions/database.php');
 if(isset($_GET['id']) AND !empty($_GET['id'])){
     
     //On recupere l'id d'une question dans la table question qui possede l'id qui a été passé '
-    $idOfQuestion = $_GET['id'];
+    $idQuestion = $_GET['id'];
 
     //Vérifier si la question existe
     $checkIfQuestionExists= $bdd->prepare('SELECT * FROM questions WHERE id = ?');
-    $checkIfQuestionExists->execute(array($idOfQuestion));
+    $checkIfQuestionExists->execute(array($idQuestion));
 
     if($checkIfQuestionExists->rowCount() > 0){ //"rowCount"=> permet de compter le nombre de données récupérer par la requete
         
